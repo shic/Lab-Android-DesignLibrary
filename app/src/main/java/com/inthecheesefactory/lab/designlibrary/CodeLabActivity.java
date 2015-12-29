@@ -1,6 +1,7 @@
 package com.inthecheesefactory.lab.designlibrary;
 
 import android.content.res.Configuration;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.widget.DrawerLayout;
@@ -17,7 +18,7 @@ public class CodeLabActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle drawerToggle;
     FloatingActionButton fabBtn;
-    FrameLayout rootLayout;
+    CoordinatorLayout rootLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +32,7 @@ public class CodeLabActivity extends AppCompatActivity {
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
         drawerToggle = new ActionBarDrawerToggle(CodeLabActivity.this, drawerLayout, R.string.hello_world, R.string.hello_world);
         drawerLayout.setDrawerListener(drawerToggle);
-        rootLayout = (FrameLayout) findViewById(R.id.rootLayout);
+        rootLayout = (CoordinatorLayout) findViewById(R.id.rootLayout);
 
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
