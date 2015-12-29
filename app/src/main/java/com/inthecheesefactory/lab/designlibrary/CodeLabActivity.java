@@ -1,6 +1,7 @@
 package com.inthecheesefactory.lab.designlibrary;
 
 import android.content.res.Configuration;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -17,6 +18,7 @@ import android.widget.FrameLayout;
 
 public class CodeLabActivity extends AppCompatActivity {
     Toolbar toolbar;
+    CollapsingToolbarLayout collapsingToolbarLayout;
 
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle drawerToggle;
@@ -36,7 +38,8 @@ public class CodeLabActivity extends AppCompatActivity {
     private void initInstances() {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsingToolbarLayout);
+        collapsingToolbarLayout.setTitle("Design Library");
 
         tabLayout = (TabLayout) findViewById(R.id.tabLayout);
         tabLayout.addTab(tabLayout.newTab().setText("Tab 1"));
