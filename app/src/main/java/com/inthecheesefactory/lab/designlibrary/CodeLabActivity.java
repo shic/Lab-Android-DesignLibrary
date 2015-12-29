@@ -23,6 +23,10 @@ import android.widget.FrameLayout;
 import java.util.ArrayList;
 import java.util.List;
 
+
+//http://www.sitepoint.com/material-design-android-design-support-library/
+//http://inthecheesefactory.com/blog/android-design-support-library-codelab/en
+
 public class CodeLabActivity extends AppCompatActivity {
     Toolbar toolbar;
     CollapsingToolbarLayout collapsingToolbarLayout;
@@ -57,9 +61,9 @@ public class CodeLabActivity extends AppCompatActivity {
         setupTabAndViewPager();
 
 
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
-        drawerToggle = new ActionBarDrawerToggle(CodeLabActivity.this, drawerLayout, R.string.hello_world, R.string.hello_world);
-        drawerLayout.setDrawerListener(drawerToggle);
+//        drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
+//        drawerToggle = new ActionBarDrawerToggle(CodeLabActivity.this, drawerLayout, R.string.hello_world, R.string.hello_world);
+//        drawerLayout.setDrawerListener(drawerToggle);
         rootLayout = (CoordinatorLayout) findViewById(R.id.rootLayout);
 
         getSupportActionBar().setHomeButtonEnabled(true);
@@ -136,17 +140,7 @@ public class CodeLabActivity extends AppCompatActivity {
             return mFragmentTitleList.get(position);
         }
     }
-    @Override
-    public void onPostCreate(Bundle savedInstanceState) {
-        super.onPostCreate(savedInstanceState);
-        drawerToggle.syncState();
-    }
 
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-        drawerToggle.onConfigurationChanged(newConfig);
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -157,8 +151,6 @@ public class CodeLabActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (drawerToggle.onOptionsItemSelected(item))
-            return true;
 
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
