@@ -1,5 +1,8 @@
 # Android Design Support Library Codelab
 
+Note: I forked this project, and have done some modification to allow the tabs wroks with page view and fragment. It might be useful for someone.
+
+
 A full tutorial on how to use Android Design Support Library. (60 mins)
 
 ![](https://raw.githubusercontent.com/nuuneoi/Lab-Android-DesignLibrary/master/promo.jpg)
